@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TaskController!{% endblock %}
+
+{% block body %}
+
+    {{form_start(form)}}
+
+        {{form_label(form.title)}}
+        {{form_widget(form.title)}}
+
+        {{form_label(form.content)}}
+        {{form_widget(form.content)}}
+
+        {{form_label(form.expiryDate)}}
+        {{form_widget(form.expiryDate)}}
+
+        {{form_rest(form)}}
+
+        <input type="submit" value="Ajouter">
+
+    {{form_end(form)}}
+
+    <p>{{msg}}</p>
+
+    {% for task in tasks %}
+        <p>New task</p>
+    {% endfor %}
+
+{% endblock %}
