@@ -24,7 +24,9 @@
     <p>{{msg}}</p>
 
     {% for task in tasks %}
-        <p>New task</p>
+        {{task.title}}
+        {{task.content}}
+        {{task.expiryDate}}
     {% endfor %}
 
 {% endblock %}
